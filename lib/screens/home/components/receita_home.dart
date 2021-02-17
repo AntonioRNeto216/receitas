@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:receitas/screens/receita/receita.dart';
 
-class Receita extends StatelessWidget {
+class ReceitaHome extends StatelessWidget {
   final String nomeReceita, caminhoImagem, usuarioReceita;
 
-  const Receita({
+  const ReceitaHome({
     Key key,
     @required this.nomeReceita,
     @required this.caminhoImagem,
@@ -15,7 +16,15 @@ class Receita extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 8.0),
       child: InkWell(
-        onTap: () => {},
+        onTap: () => Navigator.of(context).push(PageRouteBuilder(
+          pageBuilder: (context, animation, _) {
+            return Receita(
+              nomeReceita: this.nomeReceita,
+              caminhoImagem: this.caminhoImagem,
+            );
+          },
+          opaque: false,
+        )),
         child: Container(
           width: double.infinity,
           height: 120,

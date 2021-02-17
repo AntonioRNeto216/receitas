@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:receitas/screens/home/components/categoria.dart';
-import 'package:receitas/screens/home/components/receita.dart';
+import 'package:receitas/screens/home/components/receita_home.dart';
 
 class ConteudoHome extends StatefulWidget {
   @override
@@ -56,7 +56,7 @@ class _ConteudoHomeState extends State<ConteudoHome> {
         bottom: 4.0,
       ),
       child: Text(
-        "Receitas Recentes",
+        "Receitas",
         textAlign: TextAlign.start,
         style: TextStyle(
           color: Colors.black,
@@ -65,42 +65,42 @@ class _ConteudoHomeState extends State<ConteudoHome> {
         ),
       ),
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Camarão Empanado",
       usuarioReceita: "João da Silva Ribeiro",
       caminhoImagem: "assets/images/camarao_empanado.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Torta de Limão",
       usuarioReceita: "Antonio Neto",
       caminhoImagem: "assets/images/torta_de_limao.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Torta de Frango",
       usuarioReceita: "Maria do Carmo",
       caminhoImagem: "assets/images/torta_de_frango.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Milkshake",
       usuarioReceita: "Ana Maria do Vale",
       caminhoImagem: "assets/images/milkshake.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Hambuguer Vegano",
       usuarioReceita: "Alice Marques Rodrigues",
       caminhoImagem: "assets/images/hamburguer_vegano.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Hamburguer Estilo McDonalds",
       usuarioReceita: "Any Rodrigues",
       caminhoImagem: "assets/images/hamburguer_estilo_mcdonalds.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Picanha com Fritas",
       usuarioReceita: "José Alencar",
       caminhoImagem: "assets/images/picanha_com_fritas.png",
     ),
-    Receita(
+    ReceitaHome(
       nomeReceita: "Bolo de Cenoura",
       usuarioReceita: "Maria Aparecida",
       caminhoImagem: "assets/images/bolo_cenoura.png",

@@ -13,50 +13,51 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: IconButton(
-            icon: this._status == FSBStatus.FSB_CLOSE || this._status == null
-                ? Icon(Icons.menu)
-                : Icon(Icons.close),
-            color: Colors.black,
-            onPressed: () {
-              setState(() {
-                this._status = this._status == FSBStatus.FSB_OPEN
-                    ? FSBStatus.FSB_CLOSE
-                    : FSBStatus.FSB_OPEN;
-              });
-            },
-          ),
-          actions: [
-            this._status == FSBStatus.FSB_CLOSE || this._status == null
-                ? Padding(
-                    padding: EdgeInsets.only(
-                      right: 16.0,
-                    ),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.black,
-                    ),
-                  )
-                : SizedBox(),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: this._status == FSBStatus.FSB_CLOSE || this._status == null
+              ? Icon(Icons.menu)
+              : Icon(Icons.close),
+          color: Colors.black,
+          onPressed: () {
+            setState(() {
+              this._status = this._status == FSBStatus.FSB_OPEN
+                  ? FSBStatus.FSB_CLOSE
+                  : FSBStatus.FSB_OPEN;
+            });
+          },
         ),
-        body: FoldableSidebarBuilder(
-          drawerBackgroundColor: Colors.grey[200],
-          drawer: DrawerHome(
-            closeDrawer: () {
-              setState(() {
-                this._status = FSBStatus.FSB_CLOSE;
-              });
-            },
-          ),
-          screenContents: ConteudoHome(),
-          status: this._status,
+        actions: [
+          this._status == FSBStatus.FSB_CLOSE || this._status == null
+              ? Padding(
+                  padding: EdgeInsets.only(
+                    right: 16.0,
+                  ),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
+                )
+              : SizedBox(),
+        ],
+      ),
+      body: FoldableSidebarBuilder(
+        drawerBackgroundColor: Colors.white70,
+        drawer: DrawerHome(
+          closeDrawer: () {
+            setState(() {
+              this._status = FSBStatus.FSB_CLOSE;
+            });
+          },
         ),
+        screenContents: Opacity(
+          opacity: this._status == FSBStatus.FSB_OPEN ? 0.25 : 1,
+          child: ConteudoHome(),
+        ),
+        status: this._status,
       ),
     );
   }

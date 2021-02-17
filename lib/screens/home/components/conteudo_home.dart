@@ -124,10 +124,10 @@ class _ConteudoHomeState extends State<ConteudoHome> {
       child: Column(
         children: [
           AnimatedOpacity(
-            duration: const Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 400),
             opacity: this.fecharListaCategorias ? 0 : 1,
             child: AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 400),
               width: double.infinity,
               height: this.fecharListaCategorias ? 0 : 280,
               alignment: Alignment.topCenter,

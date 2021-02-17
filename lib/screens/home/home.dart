@@ -14,9 +14,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: this._status == FSBStatus.FSB_CLOSE || this._status == null
               ? Icon(Icons.menu)
@@ -54,7 +55,7 @@ class _HomeState extends State<Home> {
           },
         ),
         screenContents: Opacity(
-          opacity: this._status == FSBStatus.FSB_OPEN ? 0.25 : 1,
+          opacity: this._status == FSBStatus.FSB_OPEN ? 0.2 : 1,
           child: ConteudoHome(),
         ),
         status: this._status,

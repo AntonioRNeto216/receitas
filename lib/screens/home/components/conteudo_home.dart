@@ -120,7 +120,7 @@ class _ConteudoHomeState extends State<ConteudoHome> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.transparent,
       child: Column(
         children: [
           AnimatedOpacity(
@@ -134,7 +134,7 @@ class _ConteudoHomeState extends State<ConteudoHome> {
               child: Container(
                 width: double.infinity,
                 height: 280,
-                padding: EdgeInsets.symmetric(vertical: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
                 color: Colors.transparent,
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(),

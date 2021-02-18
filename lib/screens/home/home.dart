@@ -34,8 +34,8 @@ class _HomeState extends State<Home> {
         actions: [
           this._status == FSBStatus.FSB_CLOSE || this._status == null
               ? Padding(
-                  padding: EdgeInsets.only(
-                    right: 16.0,
+                  padding: const EdgeInsets.only(
+                    right: 16.0, // const
                   ),
                   child: Icon(
                     Icons.search,

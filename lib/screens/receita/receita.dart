@@ -11,6 +11,7 @@ class Receita extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -28,7 +29,7 @@ class Receita extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 260,
+                height: size.height * 0.325,
               ),
               Expanded(
                 child: Container(
@@ -88,11 +89,11 @@ class Receita extends StatelessWidget {
             ],
           ),
           Positioned(
-            top: -8.0,
+            top: 0,
             child: Image.asset(
               this.caminhoImagem,
-              width: 280,
-              height: 250,
+              width: size.height * 0.65,
+              height: size.height * 0.3,
             ),
           ),
         ],

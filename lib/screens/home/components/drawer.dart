@@ -12,6 +12,7 @@ class DrawerHome extends StatelessWidget {
       color: Colors.white,
       width: size.width * 0.60,
       height: size.height,
+      padding: EdgeInsets.symmetric(horizontal: 4.0),
       child: Column(
         children: [
           SizedBox(
@@ -58,9 +59,10 @@ class CaixaDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
-      width: 225,
-      height: 72,
+      width: double.infinity,
+      height: size.height > 700 ? 72 : 80,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -68,7 +70,7 @@ class CaixaDrawer extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black45,
-            blurRadius: 4.0,
+            blurRadius: 2.0,
           ),
         ],
       ),

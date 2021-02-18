@@ -16,10 +16,7 @@ class Categoria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        left: 8.0,
-        right: 8.0,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0), // const
       child: InkWell(
         onTap: () => {},
         child: Container(
@@ -32,7 +29,7 @@ class Categoria extends StatelessWidget {
             alignment: Alignment.topCenter,
             children: [
               Positioned(
-                top: 112.0,
+                bottom: 12.0,
                 right: 8.0,
                 child: Image.asset(
                   this.caminhoImagem,
@@ -40,7 +37,7 @@ class Categoria extends StatelessWidget {
                 ),
               ),
               ListTile(
-                minVerticalPadding: 36.0,
+                minVerticalPadding: 36.0, // const
                 title: Text(
                   this.categoria,
                   style: TextStyle(
